@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="myFunction()">Click</button>
+	<app>
+		
+	</app>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript">
+		function myFunction() {
+			location.hash = "hashbr";
+		}
+		// $(document).ready(function(){
+		// 	$(window).on('hashchange',function(){
+		// 		alert("Hash Changed");
+		// 	});
+		// });
+		window.addEventListener('hashchange',function(){
+			document.getElementsByTagName('app')[0].innerHTML = location.hash.split("#")[1];
+		});
+	</script>
+</body>
+</html>
